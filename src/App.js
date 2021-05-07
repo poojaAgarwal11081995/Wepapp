@@ -97,7 +97,11 @@ function App() {
         {id:0,title:"All time UP cpu"},
         {id:0,title:"8 GB RAM, 500 GB Hard disk"},
         {id:0,title:"Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "},
-        {id:0,title:"fully managed my sql"}, ]);
+        {id:0,title:"fully managed my sql"},
+        {id:0,title:"All time UP cpu"},
+        {id:0,title:"8 GB RAM, 500 GB Hard disk"},
+        {id:0,title:"Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "},
+        {id:0,title:"fully managed my sql"},  ]);
   return (
     <React.Fragment>
      <AppBar position="static" className={classess.appbar}>
@@ -140,7 +144,7 @@ function App() {
         </Grid>
         <Grid item md={4} xs={12} spacing={4}>
         <Paper className={classess.paper} >
-        <button   className={classess.button} >
+           <button   className={classess.button} >
                   Get Started
           </button>
             <List>
