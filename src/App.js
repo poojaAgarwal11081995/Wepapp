@@ -9,6 +9,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -82,6 +83,21 @@ const useStyles = makeStyles((theme) => ({
 }));
 function App() {
   const classess = useStyles()
+  const [arr1 , setarr1] = React.useState([
+    {id:0,title:"All time UP cpu"},
+    {id:0,title:"8 GB RAM, 500 GB Hard disk"},
+    {id:0,title:"Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "},
+    {id:0,title:"fully managed my sql"}, ]);
+    const [arr2 , setarr2] = React.useState([
+      {id:0,title:"All time UP cpu"},
+      {id:0,title:"8 GB RAM, 500 GB Hard disk"},
+      {id:0,title:"Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "},
+      {id:0,title:"fully managed my sql"}, ]);
+      const [arr3 , setarr3] = React.useState([
+        {id:0,title:"All time UP cpu"},
+        {id:0,title:"8 GB RAM, 500 GB Hard disk"},
+        {id:0,title:"Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "},
+        {id:0,title:"fully managed my sql"}, ]);
   return (
     <React.Fragment>
      <AppBar position="static" className={classess.appbar}>
@@ -105,42 +121,20 @@ function App() {
                   Get Started
           </button>
             <List>
-            <ListItem>
+            {
+            arr1.map((item ,id)=>{
+                   return <ListItem key={id}>
                   <ListItemIcon>
                   <CheckCircleOutlineIcon className={classess.button_icon} />
                   </ListItemIcon>
                   <ListItemText className={classess.text_item_list}
-                    primary="All time UP cpu"
+                    primary={item.title}
                    
                   />
                 </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="8 GB RAM, 500 GB Hard disk"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand "
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="fully managed my sql"
-                   
-                  />
-                </ListItem>
+            })
+            }
+            
             </List>
             </Paper>
         </Grid>
@@ -150,42 +144,19 @@ function App() {
                   Get Started
           </button>
             <List>
-            <ListItem>
+            {
+            arr2.map((item ,id)=>{
+                   return <ListItem key={id}>
                   <ListItemIcon>
                   <CheckCircleOutlineIcon className={classess.button_icon} />
                   </ListItemIcon>
                   <ListItemText className={classess.text_item_list}
-                    primary="All time UP cpu"
+                    primary={item.title}
                    
                   />
                 </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="8 GB RAM, 500 GB Hard disk"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="fully managed my sql"
-                   
-                  />
-                </ListItem>
+            })
+            }
             </List>
             </Paper>
         </Grid>
@@ -195,78 +166,19 @@ function App() {
                   Get Started
           </button>
             <List>
-            <ListItem>
+            {
+            arr3.map((item ,id)=>{
+                   return <ListItem key={id}>
                   <ListItemIcon>
                   <CheckCircleOutlineIcon className={classess.button_icon} />
                   </ListItemIcon>
                   <ListItemText className={classess.text_item_list}
-                    primary="All time UP cpu"
+                    primary={item.title}
                    
                   />
                 </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="8 GB RAM, 500 GB Hard disk"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Use the Kubernetes Horizontal Pod Autoscaler to add instances of your application services as needed to meet demand"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="fully managed my sql"
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                   
-                  />
-                </ListItem>
-                <ListItem>
-                  <ListItemIcon>
-                    <CheckCircleOutlineIcon className={classess.button_icon} />
-                  </ListItemIcon>
-                  <ListItemText className={classess.text_item_list}
-                    primary="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-                   
-                  />
-                </ListItem>
+            })
+            }
             </List>
             </Paper>
         </Grid>
